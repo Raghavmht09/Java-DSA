@@ -17,10 +17,10 @@ public class Factors {
 	private static void solve(int n, int p, String str) {
 		// TODO Auto-generated method stub
 		if(n==1) System.out.println(str);
+		
 		for(int i=p;i<=n;i++) {
 			if(n%i==0) {
-				char a = (char)i;
-				solve(n/p,i,str+a);
+				solve(n/p,i,str+""+i+" ");
 			}
 		}
 		
