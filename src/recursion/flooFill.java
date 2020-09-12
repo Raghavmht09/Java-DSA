@@ -6,8 +6,8 @@ public class flooFill {
 
 	public static void main(String[] args) {
 		int a[][]= {{1,1,1,3,3,3},
-				    {2,2,2,2,2,2,},
-	             	{ 1,1,3,4,1,1,}
+				    {2,2,2,2,2,2},
+	             	{1,1,3,4,1,1},
 			};
 		floodFill(a,1,2,4,2);
 		printMatrix(a);
