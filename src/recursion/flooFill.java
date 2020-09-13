@@ -5,7 +5,8 @@ import java.io.*;
 public class flooFill {
 
 	public static void main(String[] args) {
-		int a[][]= {{1,1,1,3,3,3},
+		int a[][]= {
+				    {1,1,1,3,3,3},
 				    {2,2,2,2,2,2},
 	             	{1,1,3,4,1,1},
 			};
