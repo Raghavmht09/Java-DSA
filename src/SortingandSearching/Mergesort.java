@@ -4,7 +4,8 @@ package SortingandSearching;
 import java.io.*;
 import java.util.*;
 
-public class Mergesort {
+public class Mergesort
+{
 
   public static int[] mergeSort(int[] arr, int lo, int hi) {
   if(lo==hi){
