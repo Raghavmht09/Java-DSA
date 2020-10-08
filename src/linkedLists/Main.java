@@ -1,16 +1,23 @@
 package linkedLists;
+import java.util.*;
+import java.io.*;
 
 public class Main {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-->0) {
 	linkedlist list = new linkedlist();
-	list.insertbeg(1);
-	list.insertend(4);
-	list.insert(1, 2);
-	list.insert(2, 3);
-	list.printall();
-	list.delete(3);
-	list.printall();
+	int n =sc.nextInt();
+	for(int i=0;i<n;i++ ) {
+		int data=sc.nextInt();
+		list.insertend(data);
+	}
+		list.swaplastandfirst();
+		list.printall();
+		
+		}
 	}
 
 }

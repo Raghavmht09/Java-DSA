@@ -11,6 +11,42 @@ class Node{
 public class linkedlist {
 	Node head= null;
 	
+	void swaplastandfirst() {
+		if(head==null||head.next==null) {
+			return;
+		}
+		Node seclast=null;
+		Node last=head;
+		while(last.next!=null) {
+			seclast=last;
+			last=last.next;
+		}
+	seclast.next=null;
+	last.next=head;
+	head=last;
+	}
+	void findmiddle(linkedlist list,int n)
+    {
+      Node p=head,q=head;
+		while(p!=null && p.next!=null)
+      {
+              p=p.next.next;
+              q=q.next;
+      }
+      System.out.println(q.data);
+    }
+	void reverse() {
+		Node current=head,prev=null,next=null;
+		while(current!=null) {
+			next=current.next;
+			current.next=prev;
+			prev=current;
+			
+			current=next;
+		}
+		head=prev;
+	}
+	
 	void insertbeg(int data) {
 		
 	Node newnode= new Node(data);
