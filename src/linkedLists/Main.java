@@ -14,7 +14,10 @@ public class Main {
 		int data=sc.nextInt();
 		list.insertend(data);
 	}
-		list.swaplastandfirst();
+//		int element = sc.nextInt();
+//		list.insertsorted(element);
+//	list.reverse();
+	list.isPalindrome(n);
 		list.printall();
 		
 		}

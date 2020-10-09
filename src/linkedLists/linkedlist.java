@@ -8,8 +8,26 @@ class Node{
 		this.next=null;
 	}
 }
-public class linkedlist {
+ public class linkedlist {
 	Node head= null;
+	
+	void removeDuplicates()
+    {
+      
+        Node curr = head;
+ 
+        
+        while (curr != null) {
+             Node temp = curr;
+           
+            while(temp!=null && temp.data==curr.data) {
+                temp = temp.next;
+            }
+       
+            curr.next = temp;
+            curr = curr.next;
+        }
+    }
 	
 	void swaplastandfirst() {
 		if(head==null||head.next==null) {
@@ -78,6 +96,27 @@ public class linkedlist {
 		newnode.next=tempnode.next;
 		tempnode.next=newnode;
 	}
+	
+	void insertsorted(int data) {
+		Node current;
+		Node newNode= new Node(data);
+		
+		if(head==null||head.data>=newNode.data) {
+			newNode.next=head;
+			head=newNode;
+			return;
+		}
+		else {
+			current=head;
+			while (current.next != null 
+					&& current.next.data < newNode.data) 
+					                current = current.next; 
+					  
+					            newNode.next = current.next; 
+					            current.next = newNode; 
+					        } 
+		}
+			
 	
 	void delete(int num) {
 		Node currnode=head;
